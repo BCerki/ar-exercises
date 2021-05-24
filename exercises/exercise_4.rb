@@ -36,7 +36,7 @@ end
 
 # @womens_stores = Store.where("womens_apparel = true AND annual_revenue < 1000000")
 
-@womens_stores = Store.where("womens_apparel = ? AND annual_revenue < ?", params[true, 1000000])
+@womens_stores = Store.where("womens_apparel = ? AND annual_revenue < ?", true, 1000000)
 
 puts "Women's store data"
 @womens_stores.each do |store|
